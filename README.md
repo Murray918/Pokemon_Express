@@ -1,7 +1,5 @@
 # POKE EXPRESS
 
-![eh](http://digitalspyuk.cdnds.net/16/08/980x490/landscape-1456483171-pokemon2.jpg)
-
 Make a Pokemon app that displays data inside server-side rendered views.
 
 ## App
