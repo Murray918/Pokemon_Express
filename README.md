@@ -9,81 +9,18 @@ User Stories
 - When a user clicks on the name of the pokemon, they will be taken to that pokemon's `show` page, and will see the pokemon's name and image.
 
 
-### Structure
-
-
-**In terminal:**
-- create your homework directory structure as follows:
-  - `mkdir pokemon_app`
-  - `cd pokemon_app`
-  - `mkdir views`
-  - `touch views/index.ejs`
-  - `touch views/show.ejs`
-  - `mkdir models`
-  - `touch models/pokemon.js`
-  - `touch server.js`
-  - `npm init`
-    - follow `npm init` prompts
-    - Does npm init create a file? If it does, where does it create the file? What is the name of the file?
-  - `subl .` (Sierra: open the whole folder structure from the file->open menu)
-- <details><summary>Approximate File Structure</summary>
-
-  ![file structure image](https://i.imgur.com/mWMUygj.png)
-  
-  **IMPORTANT! This image is a rough outline for you to double check which main folders should be nested or on the same level. This is not an exact replica of what you should have
-  **
-
-</details>
-
-
-<hr>
-&#x1F534; The commit message should read: <br>
-"Commit 1 - All my files are created"
-<hr>
-
-### Install NPM Packages
-
-**In terminal:**
-- Make sure that you are on the same directory level as your `package.json` (why?)
-- `npm install express ejs` (installing multiple packages at once)
-- check your `package.json`
-- <details><summary>package.json screenshot (note that package version numbers may be different)</summary>
-
-  ![package.json image](https://i.imgur.com/JiEa7M2.png)
-
-</details>
-
-<hr>
-&#x1F534; The commit message should read: <br>
-"Commit 2 - All my npm packages are added"
-<hr>
-
-
 ### Set up your server
 
-- in `server.js` set up your server
- - require express
- - set `express()` to a variable
- - set a variable of `PORT` to `3000`
- - set your app to listen to the port and include a console log, so that you can tell when your server is running
- - include a get route `/` that will `res.send('Welcome to the Pokemon App!');`
-So that when you got to `localhost:3000`, you will see `Welcome to the Pokemon App!`
-- **In terminal**
-  - `nodemon` or `nodemon server.js` (if you set your up your `package.json` to start `server.js` you don't need to put it after `nodemon`)
-  - **GOTCHA!** : nodemon will only work if you run it from the same location as your `package.json`
-- **In the browser**
- - go to `localhost:3000`
- - check that you have your `Welcome to the Pokemon App!` message displaying
+- Create an express app that listens on port 3000. Ensure that you have installed the necessary npm packages to run an express server and render templates.
 
 <hr>
  &#x1F534; The commit message should read: <br>
- "Commit 3 - My server is set up and running"
+ "Commit 1 - My server is set up and running"
 <hr>
 
 
-
 ### Set up your _'database'_
-- You have created a file called `pokemon.js`
+- Create a file called `pokemon.js`
 - Inside of this file, put the following array of pokemon objects. This is your 'database' for tonight's homework
 
 ```
@@ -98,63 +35,36 @@ const pokemon = [ {name: "Bulbasaur", img: "http://img.pokemondb.net/artwork/bul
 
 ```
 - Set up your 'database' so that it can be exported to your `server.js` and then be required by your `server.js`
-- set this 'database' to a variable callled `pokemon` in your `server.js` file
+
 - create a get route `/pokemon` that will `res.send(pokemon)`, which will display your pokemon data as json in the browser
 
 <hr>
 &#x1F534; The commit message should read: <br>
-"Commit 4 - Connected my database, can see json in the browser"
+"Commit 2 - Connected my database, can see json in the browser"
 <hr>
 
 ### Set up your index view
 
-- Instead of displaying json at your `/pokemon` route, you should serve the `index.ejs` file you created that will display your pokemon
-- You will have to set up your ejs file
-  - Start with your html boilerplate code
-  - Add an `<h1>` that describes this page, i.e. 'See All The Pokemon!'
-  - Add a `<style>` tag so you can write some CSS directly in your html file. [More info](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style) - In the Hungry for More section - you can work on properly linking a CSS file. 
-  - Add a background-color and text color to the body, inside your `<style>` tag to be sure it is working as expected. Example:
+- Instead of displaying json at your `/pokemon` route, you should serve an `index.ejs` file that displays a list of all the pokemon. You may want to look up how data can be sent from a server into a template using express.
 
-```html
-<style type="text/css">
-body {
-  color: blanchedalmond;
-  background-color: steelblue;
-}
-</style>
-```
-
-  **OR** : Maybe look up how to add static assets! (which is css, or clientside js)
+- Add some style to your list with a style tag, or, for an added challenge, look up how to serve static files in an express app and use a separate css file instead.
   
-  - **Stretch step, not required** : Choose a google font and add it to your html and inside your `<style>` tag
-  - Change your `/pokemon` route to `res.render` your `index.ejs` file
-  - In your browser, go to `localhost:3000/pokemon` and be sure to see your `index.ejs` view with h1 tag
+- **Stretch step, not required** : Choose a google font and add it to your html and inside your `<style>` tag
 
 <hr>
   &#x1F534; The commit message should read: <br>
-  "Commit 5 - index.ejs view rendered at pokemon route"
-<hr>
-
-### Set up your index view to show your pokemon data
-- continue working on your `index.ejs` view so that you can see:
-  - the name of each pokemon, as a list item, inside an unordered list
-  - this list should be dynamically rendered by ejs based on your data from your 'database'
-
-<hr>
-    &#x1F534; The commit message should read: <br>
-    "Commit 6 - I can view a list of all my pokemon in the browser "
+  "Commit 3 - index.ejs view rendered at pokemon route"
 <hr>
 
 ### Set up your show route
 
 - Inside your `server.js`, add a new get route `/pokemon/:id`
-- That will `res.send(req.params.id);`
-- So, when you go to `localhost:3000/pokemon/whatever`
- - `whatever` will show up in the browser
+- This route should serve a template called `show.ejs` which displays the information of a specific pokemon according to their index in the pokemon array. For example, `/pokemon/1` should display the 0 indexed pokemon.
+- You may want to look up how to access route parameters in express.
 
 <hr>
    &#x1F534; The commit message should read: <br>
-   "Commit 7 - show view shows req.params.id "
+   "Commit 4 - show view shows pokemon details "
 <hr>
 
 
@@ -165,21 +75,7 @@ body {
 
 <hr>
    &#x1F534; The commit message should read: <br>
-   "Commit 8 - added dynamic anchor tags to index.ejs "
-<hr>
-
-### Render your individual pokemon in the show view
-- copy/paste your code from your `index.ejs`  into your `show.ejs` (surely, there must be a better way; are you wondering if there is something in the hungry for more section about this?)
-- change all your html code inside your `show.ejs` file's `<body>` so that 
-	- your h1 tag says "Gotta Catch 'Em All"
-	- add an h2 tag that will display the name of the pokemon
-	- add an image tag that will display an image of the pokemon
-	- add an anchor tag with the text of `back`, that will take you back to your `index.ejs` view
-- update the route in the server.js to render the show view with the pokemon data
-
-<hr>
-  &#x1F534; The commit message should read: <br>
-  "Commit 9 - created show views of each pokemon "
+   "Commit 5 - added dynamic anchor tags to index.ejs "
 <hr>
 
 ## Style your app... 
@@ -190,17 +86,15 @@ body {
 
 <hr>
 &#x1F534; The commit message should read: <br>
-  "Commit 10 - set up serving of static files so we can add CSS"
+  "Commit 6 - set up serving of static files so we can add CSS"
 <hr>
 
 ### Style your app, 
 
 <hr>
 &#x1F534; The commit message should read: <br>
-  "Commit 11 - The app is styled"
+  "Commit 7 - The app is styled"
 <hr>
-
-
 
 ## You finished!  Nice work. Submit your homework
 
