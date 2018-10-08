@@ -1,0 +1,20 @@
+{
+  "name": "pokemon-express",
+  "version": "1.0.0",
+  "description": "Express app using pokemon to learn CRUD",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.generalassemb.ly/ryanfleharty/Pokemon-Express.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "express": "^4.16.3",
+    "mocha": "^5.2.0"
+  }
+}
