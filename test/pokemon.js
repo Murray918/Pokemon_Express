@@ -27,4 +27,14 @@ describe('pokemon routes index and show', function(){
         })
         .end(done)
     })
+    it('has a list of links on the index page', function(done){
+        supertest(app)
+        .get('/pokemon')
+        .expect(200)
+        .expect((response)=>{
+            const $ = cheerio.load(response.text)
+            const firstHref = $('.pokemon li:first-child').attr('href');
+            firstHref.should.be.eq('/pokemon/0')
+        })
+    })
 })
