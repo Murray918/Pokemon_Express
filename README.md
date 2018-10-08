@@ -45,7 +45,7 @@ const pokemon = [ {name: "Bulbasaur", img: "http://img.pokemondb.net/artwork/bul
 
 ### Set up your index view
 
-- Instead of displaying json at your `/pokemon` route, you should serve an `index.ejs` file that displays a list of all the pokemon. You may want to look up how data can be sent from a server into a template using express.
+- Instead of displaying json at your `/pokemon` route, you should serve an `index.ejs` file that displays a list of all the pokemon. Put the pokemon inside a `<ul>` with class name `pokemon`. You may want to look up how data can be sent from a server into a template using express.
 
 - Add some style to your list with a style tag, or, for an added challenge, look up how to serve static files in an express app and use a separate css file instead.
   
@@ -59,7 +59,7 @@ const pokemon = [ {name: "Bulbasaur", img: "http://img.pokemondb.net/artwork/bul
 ### Set up your show route
 
 - Inside your `server.js`, add a new get route `/pokemon/:id`
-- This route should serve a template called `show.ejs` which displays the information of a specific pokemon according to their index in the pokemon array. For example, `/pokemon/1` should display the 0 indexed pokemon.
+- This route should serve a template called `show.ejs` which displays the information of a specific pokemon according to their index in the pokemon array. For example, `/pokemon/0` should display the 0 indexed pokemon.
 - You may want to look up how to access route parameters in express.
 
 <hr>
@@ -78,8 +78,6 @@ const pokemon = [ {name: "Bulbasaur", img: "http://img.pokemondb.net/artwork/bul
    "Commit 5 - added dynamic anchor tags to index.ejs "
 <hr>
 
-## Style your app... 
-
 ### Style your app, step 1: static
 
  - Set up your app to be able to use CSS like we did in class.  Use a dummy (i.e. just set a background color) CSS declaration.  Remember: you need express.static() middleware. (also remember that you don't need to npm install anything for this particular middleware because its part of express. But for others you do.)
@@ -89,7 +87,7 @@ const pokemon = [ {name: "Bulbasaur", img: "http://img.pokemondb.net/artwork/bul
   "Commit 6 - set up serving of static files so we can add CSS"
 <hr>
 
-### Style your app, 
+### Style your app 
 
 <hr>
 &#x1F534; The commit message should read: <br>
@@ -97,6 +95,8 @@ const pokemon = [ {name: "Bulbasaur", img: "http://img.pokemondb.net/artwork/bul
 <hr>
 
 ## You finished!  Nice work. Submit your homework
+
+You can run `npm test` to confirm your app's functionality matches specs. 
 
 # Day Two
 
