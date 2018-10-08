@@ -11,7 +11,7 @@ User Stories
 
 ### Set up your server
 
-- Create an express app that listens on port 3000. Ensure that you have installed the necessary npm packages to run an express server and render templates.
+- Create an express app that listens on port 3000. Ensure that you have installed the necessary npm packages to run an express server and render templates. You can refer back to old code and lessons, but try to recall the necessary steps before checking in old code. 
 
 <hr>
  &#x1F534; The commit message should read: <br>
@@ -97,6 +97,16 @@ const pokemon = [ {name: "Bulbasaur", img: "http://img.pokemondb.net/artwork/bul
 <hr>
 
 ## You finished!  Nice work. Submit your homework
+
+# Day Two
+
+### Complete CRUD functionality
+
+-Set up routes and templates to allow for full CRUD functionality. 
+- Users should be able to insert a new pokemon into the array using a form on a `new.ejs` page. Creation should be handled via a POST route to the `/pokemon` route.
+- Users should be able to edit an individual pokemon on an `edit.ejs` page accessed from the  `/pokemon/:id/edit` route. The updating should be handled via a POST request to the `/pokemon/:id` route.
+- Users should be able to delete a pokemon using a button provided on the show and index pages.
+- The final app should have what are known as the 7 RESTful routes. 
 
 ## Hungry for more?
 
