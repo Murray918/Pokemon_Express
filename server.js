@@ -2,6 +2,7 @@
 const express = require('express');
 const app = express();
 const pokemon = require('./models/pokemon.js')
+const path = require('path')
 
 
 
@@ -9,9 +10,10 @@ const PORT = 3000;
 
 
 app.set('view engine', 'ejs')
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/pokemon', (request, response) => {
-	response.send(pokemon)
+	response.render('pages/index.ejs',{pokemon: pokemon})
 })
 
 
