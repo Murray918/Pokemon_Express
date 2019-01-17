@@ -69,7 +69,7 @@ const pokemon = [
 
 ### Set up your index view
 
-- Instead of displaying json at your `/pokemon` route, you should serve an `index.ejs` file that displays a list of all the pokemon. Put the pokemon inside a `<ul>` with class name `pokemon`.
+- Instead of displaying data at your `/pokemon` route, you should serve an `index.ejs` file that displays a list of all the pokemon. Put the pokemon inside a `<ul>` with class name `pokemon`.
 
 - Add some style to your list with a style tag, or, for an added challenge, look up how to serve static files in an express app and use a separate css file instead.
 
