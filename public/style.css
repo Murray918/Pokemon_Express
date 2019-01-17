@@ -1,0 +1,10 @@
+body {
+	text-align: center;
+}
+ul {
+	list-style-type: none;
+}
+li {
+	font-family: 'Permanent Marker';
+	font-size: 50px;
+}

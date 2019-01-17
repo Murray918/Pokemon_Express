@@ -6,12 +6,12 @@ let pokemon = require('./models/pokemon.js');
 
 const port = 3000;
 
-app.use(express.static(path.join(__dirname, `public`)));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'ejs');
 
 app.get('/pokemon', (request, response) => {
-	response.send(pokemon);
+	response.render('pages/index.ejs', { pokemon: pokemon });
 });
 
 app.listen(port);
