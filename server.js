@@ -13,5 +13,7 @@ app.set('view engine', 'ejs');
 app.get('/pokemon', (request, response) => {
 	response.render('pages/index.ejs', { pokemon: pokemon });
 });
-
+app.get('/pokemon/:id', (request, response) => {
+	response.render('pages/show.ejs', { pokemon: pokemon[request.params.id] });
+});
 app.listen(port);

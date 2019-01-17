@@ -1,10 +1,26 @@
 body {
 	text-align: center;
+	background-color: black;
 }
 ul {
 	list-style-type: none;
 }
+@font-face {
+	font-family: 'pokemon';
+	src: url('fonts/PokemonSolidttf.ttf');
+}
 li {
-	font-family: 'Permanent Marker';
+	letter-spacing: 5px;
+	padding: 25px;
+	font-family: 'pokemon';
 	font-size: 50px;
+}
+p {
+	font-size: 50px;
+	color: yellow;
+	font-family: 'pokemon';
+}
+a {
+	color: yellow;
+	text-decoration: none;
 }
