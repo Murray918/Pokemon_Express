@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express()
+const pokemon = require('./models/pokemon.js')
 app.set('view engine', 'ejs')
 
 
@@ -11,7 +12,9 @@ app.set('view engine', 'ejs')
 
 
 
-
+app.get('/pokemon', (request, response) => {
+	response.send(pokemon)
+})
 
 
 
