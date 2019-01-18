@@ -16,8 +16,13 @@ app.get('/pokemon', (request, response) => {
 	response.render('pages/index.ejs',{pokemon: pokemon})
 })
 
+app.get('/pokemon/:id', (request, response) => {
+	response.render('pages/show.ejs', {pokemon: pokemon[request.params.id]})
+})
+
 
 
 app.listen(PORT, function() {
   console.log('My server is set up and running on port: ', PORT);
 })
+module.exports=app

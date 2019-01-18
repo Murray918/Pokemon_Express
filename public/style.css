@@ -1,19 +1,25 @@
 
 body {
 	text-align: center;
-	padding: 10px;
+	padding: 70px;
+	background-color: rgb(63, 71, 62);
 }
 
 li {
 	font-family: 'Coiny', cursive;
-	font-size: 35px;
+	font-size: 55px;
 }
 
 a {
 	text-decoration: none;
-	color: black;
+	color: rgb(115, 255, 84);
 }
 
 ul {
 	list-style-type: none;
+}
+
+p {
+	font-size: 55px;
+	color: rgb(115, 255, 84);
 }
