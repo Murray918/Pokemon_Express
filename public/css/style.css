@@ -1,3 +1,14 @@
+
+body {
+	font-size: 20px;
+	text-align: center;
+	list-style: none;
+}
+
+h1 {
+	font-size: 100px;
+}
+
 .data-list {
-	font-size: 50px;
+	list-style: none;
 }
