@@ -1,8 +1,10 @@
 
 body {
+	font-family: pokemon hollow;
 	font-size: 20px;
 	text-align: center;
 	list-style: none;
+	background-image: linear-gradient(white, red);
 }
 
 h1 {
@@ -11,4 +13,8 @@ h1 {
 
 .data-list {
 	list-style: none;
+}
+
+.data-name {
+	font-size: 50px;
 }
