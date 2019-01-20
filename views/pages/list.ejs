@@ -3,8 +3,8 @@
 	<ul class="data-list">
 		<% data.map((poke, index)=> {%>
 			<li class="poke">
-			<a href="">
-				<%= poke.name %>
+			<a href="/pokemon/<%= index %>" class="link">
+				<h2 class="name"><%= poke.name %></h2>
 			</a>
 			</li>
 		<%})%>

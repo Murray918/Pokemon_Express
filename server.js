@@ -18,6 +18,14 @@ app.get('/pokemon', (req, res)=> {
 })
 
 
+app.get('/pokemon/:id', (req, res)=> {
+	res.render('pages/show', {
+		data: pokemon[req.params.id],
+		page: 'show',
+		cssPath: 'css/style.css'
+	})
+})
+
 
 
 const PORT = 3000
