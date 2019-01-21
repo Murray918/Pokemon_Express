@@ -6,7 +6,6 @@ head
 	title Pokemon!!!
 	body
 		h1 These are my guys
-		div
-			ul.pokemon
-			each val in myTeam
-				li= val
+		ul
+		each n, i in myTeam
+			li= myTeam[i].name

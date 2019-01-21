@@ -10,7 +10,11 @@ app.get('/', (req, res) => {
     	myTeam:myPokemon
     })
 })
-
+app.get('/show/:id', (req, res) => {
+    res.render('show', {
+    	myTeam:myPokemon
+    })
+})
 // LISTENER
 app.listen(port, function() {
     console.log('Ashy Ketchup Ready to Fight!: ', port);
