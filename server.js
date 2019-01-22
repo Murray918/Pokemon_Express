@@ -23,7 +23,12 @@ app.get('/', (request, response) => {
   })
 })
 
-
+app.get('/pokemon/:id', (request, response) =>{
+	response.render('index.ejs', {
+		pkmn: pokemon[request.params.id],
+		page: 'show.ejs'
+	})
+})
 
 
 
