@@ -1,6 +1,5 @@
-<h1><span>PoKéMoN</span></h1>
 <ul class="pokemon">
 <% component.map((pokemon, index) => { %>
-	<li><a href="<% index %>"><%= pokemon.name %></a></li>
+	<li><a href="/pokemon/<%= index %>"><%= pokemon.name %></a></li>
 <% }) %>
 </ul>

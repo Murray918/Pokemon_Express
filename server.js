@@ -1,9 +1,12 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 const pokemon = require('./models/pokemon.js')
 const path = require('path')
 const PORT = 3000
 
 let app = express()
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 // this links our server to a static public directory
 app.use(express.static(path.join(__dirname, 'public')))
@@ -11,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.set('views', './views')
 app.set('view engine', 'ejs')
 
-app.get('/pokemon', (request, response) => {
+app.get('/', (request, response) => {
 	response.render('pages/index.ejs', {
 		component: pokemon,
 		page: '../partials/list.ejs',
@@ -23,9 +26,19 @@ app.get('/pokemon/:index', (request, response) => {
 	let pokedex = request.params.index
 	response.render('pages/index.ejs', {
 		component: pokemon[pokedex],
-		page: '../partials/list.ejs',
+		page: '../partials/show.ejs',
 		cssPath: 'css/style.css'
 	})
+})
+
+app.get('/new', (request, response)=> {
+  response.render('partials/new.ejs')
+})
+
+app.post('/pokemon/', (request, response) => {
+	let newMon = request.body['new-pokemon']
+	pokemon.push(newMon)
+	response.redirect('/')
 })
 
 
