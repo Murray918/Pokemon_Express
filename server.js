@@ -1,3 +1,6 @@
+//dependencies 
+
+const pokemon = require('./models/pokemon')
 const express = require('express')
 let app = express()
 
@@ -10,3 +13,28 @@ const PORT = 3000;
 app.listen(PORT, function () {
 console.log('POKEMON GO')
 })
+
+
+//index route
+app.set('view engine', 'ejs')
+
+app.get('/', (req, res)=>{
+	res.send(     {
+		thing: 'pokemon'
+
+	})
+})
+
+
+//show route
+
+
+
+
+
+
+
+
+
+
+module.exports = app;
