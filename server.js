@@ -11,8 +11,10 @@ app.get('/', (req, res) => {
     })
 })
 app.get('/show/:id', (req, res) => {
+    console.log(myPokemon[req.params.id])
     res.render('show', {
-    	myTeam:myPokemon
+    	myTeam:myPokemon[req.params.id],
+    	path:'show'
     })
 })
 // LISTENER

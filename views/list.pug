@@ -1,6 +1,6 @@
 section
-	ul.pokemon
-		myTeam.map(mixin(){
-			li Hello
-		})
-		li= myTeam
+ul 	
+	each teammate in myTeam
+		li
+			a(href="/show/" + teammate.name)=teammate.name
+
