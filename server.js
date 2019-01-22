@@ -19,5 +19,15 @@ app.get('/pokemon', (request, response) => {
 	})
 })
 
+app.get('/pokemon/:index', (request, response) => {
+	let pokedex = request.params.index
+	response.render('pages/index.ejs', {
+		component: pokemon[pokedex],
+		page: '../partials/list.ejs',
+		cssPath: 'css/style.css'
+	})
+})
+
+
 app.listen(PORT)
 console.log(`listening on port: ${PORT}`)
