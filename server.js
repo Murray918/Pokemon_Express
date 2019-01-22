@@ -22,12 +22,12 @@ app.get('/pokemon/new', (request, response) => {
 });
 app.get('/pokemon/:id/edit', (request, response) => {
 	idChange = request.params.id;
-	response.render('pages/edit.ejs', { action: '/pokemon/:id' });
+	response.render('pages/edit.ejs', { action: `/pokemon/${idChange}` });
 });
 app.get('/pokemon/:id', (request, response) => {
 	response.render('pages/show.ejs', { pokemon: pokemon[request.params.id] });
 });
-app.put('/pokemon/:id', (request, response) => {
+app.post(`/pokemon/${idChange}`, (request, response) => {
 	pokemon[idChange].name = request.body['name'];
 	if (request.body['URL'] != '') pokemon[idChange].img = request.body['URL'];
 	response.redirect('/pokemon');

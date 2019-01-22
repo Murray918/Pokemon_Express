@@ -21,9 +21,18 @@ p {
 	font-family: 'pokemon';
 }
 a {
+	font-family: 'pokemon';
+	letter-spacing: 5px;
+	font-size: 30px;
 	color: yellow;
 	text-decoration: none;
 }
 label {
+	letter-spacing: 5px;
+	font-family: 'pokemon';
 	color: yellow;
+}
+button {
+	font-size: 20px;
+	padding: 10px;
 }
