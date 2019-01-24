@@ -1,6 +1,6 @@
 section
 ul 	
-	each teammate in myTeam
+	each teammate, index in myTeam
 		li
-			a(href="/show/" + teammate.name)=teammate.name
+			a(href="/show/" + index)=teammate.name
 
