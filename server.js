@@ -1,9 +1,14 @@
 const express = require('express')
 const myPokemon = require('./model/pokemon')
 const pug = require('pug')
+const path = require('path')
 const port = 3000
 let app = express()
+
+
 app.set('view engine', 'pug')
+
+app.use(express.static(path.join(__dirname + '/static')))
 
 app.get('/', (req, res) => {
     res.render('index', {
