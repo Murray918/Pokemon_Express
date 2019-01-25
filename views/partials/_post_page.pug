@@ -1,0 +1,12 @@
+extends ../partials/_layout
+block content
+	h2 Add New Pokemon Page
+			
+	form(action="/pokemon" method="POST")
+		div
+			label(for="pokemon-name") Add Name
+			input#pokemon-name(name="pokemon-name" type="text")
+		div
+			label(for="pokemon-url")  Add URLs 
+			input#pokemon-url(name="pokemon-url" type="text")
+		button(type="submit") New Pokemon

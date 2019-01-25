@@ -1,0 +1,18 @@
+extends ../partials/_layout
+block content
+	fieldset
+		legend List of Pokemon
+		div
+			ul
+				each item, index in data
+					li 
+						a(href=`/pokemon/${index}`) #{item.name}
+
+	fieldset
+		legend List of Actions
+		div
+			h3
+				a(href='/pokemon/add') Add New Pokemon
+		div
+			h3
+				a(href='/pokemon/delete') Delete Pokemon

@@ -1,0 +1,14 @@
+extends ../partials/_layout
+block content
+	section
+		img(src=`${data.img}` alt='Pokemon picture')
+		h1 #{data.name}
+
+	fieldset
+		legend List of Actions
+		div
+			h3
+				a(href=`/pokemon/edit/${index}`) Edit Pokemon
+		div
+			h3
+				a(href=`/pokemon/delete/${index}`) Delete Pokemon

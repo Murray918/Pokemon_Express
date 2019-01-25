@@ -1,0 +1,13 @@
+extends ../partials/_layout
+block content
+	h2 Delete Pokemon Page
+	section
+		img(src=`${data.img}` alt='Pokemon picture')
+		h1 #{data.name}
+
+	//form(action="/pokemon/delete/delete/0" method="post")
+		//label(for="pokemon-name")
+		//input#pokemon-name(name="pokemon-name" type="text")
+		//button(type="submit") Delete Pokemon
+	button(onclick=`horse(${index})` type='button') Delete Pokemon
+	//<button onclick="myFunction()">Click me</button>
