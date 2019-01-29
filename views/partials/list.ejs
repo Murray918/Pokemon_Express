@@ -1,0 +1,8 @@
+<ul class="pokemon">
+	<%let i=0%>
+	<% pokemon.map((pokemonItem)=>{ %>
+		<li><a href='/pokemon/<%=i%>'><%=pokemonItem.name%></a>
+			<a href="/pokemon/<%=i%>/edit">Edit</a>
+		</li>
+	<% i++ }); %>
+</ul>

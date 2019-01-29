@@ -1,0 +1,38 @@
+body {
+	text-align: center;
+	background-color: black;
+}
+ul {
+	list-style-type: none;
+}
+@font-face {
+	font-family: 'pokemon';
+	src: url('fonts/PokemonSolidttf.ttf');
+}
+li {
+	letter-spacing: 5px;
+	padding: 25px;
+	font-family: 'pokemon';
+	font-size: 50px;
+}
+p {
+	font-size: 50px;
+	color: yellow;
+	font-family: 'pokemon';
+}
+a {
+	font-family: 'pokemon';
+	letter-spacing: 5px;
+	font-size: 30px;
+	color: yellow;
+	text-decoration: none;
+}
+label {
+	letter-spacing: 5px;
+	font-family: 'pokemon';
+	color: yellow;
+}
+button {
+	font-size: 20px;
+	padding: 10px;
+}
