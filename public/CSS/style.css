@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "Pokemon";
+    src: url('../Pokemon-Solid.ttf');
+}
+
+body {
+    text-align: center;
+    background: url('../poketrainer.jpg') top center no-repeat;
+}
+
+h1 {
+    font-size: 4vw;
+    font-family: Pokemon, Roboto, sans-serif;
+    color: #5db9ff;
+    text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.6);
+}
+h2 {
+    font-family: Pokemon, Roboto, sans-serif;
+    color: #fbd743;
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.6);
+}
+
+li {
+    list-style-type: none;
+    list-style: none;
+    font-size: 2vw;
+    text-transform: lowercase;
+    font-family: Pokemon, Roboto, sans-serif;
+    box-sizing: content-box;
+    max-width: 50vw;
+    margin: 0 auto;
+}
+
+ul {
+    padding-top: 2vw;
+    padding-left: 0;
+
+}
+
+a {
+    text-decoration: none;
+    letter-spacing: 0.0725em;
+    color: #eee;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+a:hover {
+    color: #fbd743;
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.6);
+}
