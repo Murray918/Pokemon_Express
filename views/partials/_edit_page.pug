@@ -1,0 +1,15 @@
+extends ../partials/_layout
+block content
+	h2 Edit Pokemon Page
+	section
+		img(src=`${data.img}` alt='Pokemon picture')
+		h1 #{data.name}
+			
+	form(action="/pokemon" method="PUT")
+		div
+			label(for="pokemon-name") Add Name
+			input#pokemon-name(name="pokemon-name" type="text")
+		div
+			label(for="pokemon-name")  Add URLs 
+			input#pokemon-url(name="pokemon-url" type="text")
+		button(type="submit") Edit Pokemon
