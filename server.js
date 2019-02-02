@@ -1,13 +1,15 @@
+
 const express = require('express');
 const app = express()
 const pokemon = require('./models/pokemon.js')
+const bodyParser = require('body-parser')
 app.set('view engine', 'ejs')
 app.set('views', './views')
 
 
 app.use(express.static(__dirname + '/public'));
-
-
+app.use(bodyParser.urlencoded({ extended:false}))
+app.use(bodyParser.json())
 
 
 
@@ -29,6 +31,19 @@ app.get('/pokemon/:id', (request, response) =>{
 		page: 'show.ejs'
 	})
 })
+
+app.get('/new', (request, response) =>{
+	response.render('new.ejs')
+})
+
+app.post('/pokemon', (request, response) => {
+	let newPokemon = {
+		name: request.body['name']
+	}
+	pokemon.push(newPokemon)
+	response.redirect('/')
+})
+
 
 
 

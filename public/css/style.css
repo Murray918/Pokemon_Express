@@ -1,5 +1,9 @@
-body { 
-background-color: #7b9cc4;
-text-align: center;
-list-style-type: none;
- }
+body {
+    background-color: #7b9cc4;
+    text-align: center;
+    font-size: 12pt;
+}
+
+ul {
+    list-style-type: none;
+}
