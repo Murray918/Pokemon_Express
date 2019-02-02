@@ -1,0 +1,11 @@
+<section class="container">
+	<ul class="Pokemon-list">
+		<% poke.map((pokemon, index)=> {%>
+			<li class="pokemon">
+				<a href="/pokemon/<%= index %>" class="link">
+					<h2 class="name"><%= pokemon.name %></h2>
+				</a>
+			</li>
+		<%})%>
+	</ul>
+</section>
