@@ -1,0 +1,6 @@
+section
+	ul 	
+		each teammate, index in myTeam
+			li
+				a(href="/show/" + index)=teammate.name
+
