@@ -4,7 +4,8 @@
   "description": "Express app using pokemon to learn CRUD",
   "main": "server.js",
   "scripts": {
-    "test": "mocha --exit"
+    "test": "mocha --exit",
+    "start": "npm nodemon server.js"
   },
   "repository": {
     "type": "git",
