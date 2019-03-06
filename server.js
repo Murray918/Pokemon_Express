@@ -9,9 +9,10 @@ app.set('views', './views')
 const port = 4000
 
 pokemon = require('./models/pokemon')
-const pokemon = require('./pokemon')
 
-app.get('/pokemon', (req, res)=>{
+app.use(express.static(__dirname + '/public'))
+
+app.get('/', (req, res)=>{
 	res.render('index.ejs', {
 		pkmn: pokemon,
 		page: 'list.ejs'
