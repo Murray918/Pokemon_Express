@@ -2,9 +2,13 @@ const express = require('express')
 
 let app = express()
 const ejs = require ('ejs')
+const bodyparser = require('body-parser')
 
 app.set('view engine','ejs')
 app.set('views', './views')
+app.use(bodyParser.urlencoded({ extended:false}))
+app.use(bodyParser.json())
+
 
 const port = 4000
 
@@ -28,10 +32,18 @@ app.get('/pokemon/:index', (req, res)=>{
 		page: 'show.ejs'
 	})
 })
-// app.post('/pokemon/:id',(request,respond)=>{
-// 	let id = request.params.id
-// 	response.send()
-// })
+
+app.get('/new', (request, response) =>{
+	response.render('new.ejs')
+})
+
+app.post('/pokemon', (request, response) => {
+	let newPokemon = {
+		name: request.body['name']
+	}
+	pokemon.push(newPokemon)
+	response.redirect('/')
+})
 
 app.listen(port, function(){
 	console.log('Pokemon running on port', port);
